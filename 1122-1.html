@@ -26,7 +26,7 @@
        .attr("transform", "translate(200,0)")
        .attr("x", 50)
        .attr("y", 50)
-       .attr("font-size", "24px")
+       .attr("font-size", "20px")
        .text("台北市第11屆里長中有擔任過里長之人數")
 
     var x = d3.scaleBand().range([0, width]).padding(0.4),
@@ -41,7 +41,7 @@
         }
 
         x.domain(data.map(function(d) { return d.行政區; }));
-        y.domain([0, d3.max(data, function(d) { return d.人數; })]);
+        yScale.domain([0, d3.max(data, function(d) { return parseInt(d.人數); })]);
 
         g.append("g")
          .attr("transform", "translate(0," + height + ")")
@@ -55,7 +55,7 @@
 
         g.append("g")
          .call(d3.axisLeft(y).tickFormat(function(d){
-             return "人" + d;
+             return d+"人" ;
          }).ticks(10))
          .append("text")
          .attr("transform", "rotate(-90)")
@@ -102,7 +102,7 @@
              return y(d.人數) - 15;
          })
          .text(function() {
-             return [ '人' +d.人數];  // 人數of the text
+             return [ d.人數+'人' ];  // 人數of the text
          });
     }
 
