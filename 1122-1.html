@@ -24,17 +24,16 @@
 
     svg.append("text")
        .attr("transform", "translate(200,0)")
-       .attr("x", 60)
-       .attr("y", 60)
-       .attr("font-size", "60px")
-       .attr("color","green")
-       .text("台北市第11屆里長中有擔任過里長之人數")
+       .attr("x", 50)
+       .attr("y", 50)
+       .attr("font-size", "24px")
+             .text("台北市第11屆里長中有擔任過里長之人數")
 
     var x = d3.scaleBand().range([0, width]).padding(0.4),
         y = d3.scaleLinear().range([height, 0]);
 
     var g = svg.append("g")
-            .attr("transform", "translate(" + 200+ "," + 200 + ")");
+            .attr("transform", "translate(" + 100+ "," + 100 + ")");
 
     d3.csv("xyz.csv", function(error, data) {
         if (error) {
