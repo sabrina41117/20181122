@@ -55,11 +55,12 @@
 
         g.append("g")
          .call(d3.axisLeft(y).tickFormat(function(d){
-             return d +"人" ;
+             return d +"p" ;
          }).ticks(10))
+         .tickValues([0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40])
          .append("text")
          .attr("transform", "rotate(-90)")
-         .attr("y", 50)
+         .attr("y", 10)
          .attr("dy", "-5.1em")
          .attr("text-anchor", "end")
          .attr("stroke", "black")
@@ -102,7 +103,7 @@
              return y(d.人數) - 15;
          })
          .text(function() {
-             return [ d.人數+'人' ];  // 人數of the text
+             return [ d.人數+'p' ];  // 人數of the text
          });
     }
 
