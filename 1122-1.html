@@ -41,7 +41,7 @@
         }
 
         x.domain(data.map(function(d) { return d.行政區; }));
-        yScale.domain([0, d3.max(data, function(d) { return parseInt(d.人數); })]);
+        y.domain([0, d3.max(data, function(d) { return (d.人數); })]);
 
         g.append("g")
          .attr("transform", "translate(0," + height + ")")
