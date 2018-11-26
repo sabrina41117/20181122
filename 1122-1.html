@@ -41,7 +41,7 @@
         }
 
         x.domain(data.map(function(d) { return d.行政區; }));
-        y.domain([0, d3.max(data, function(d) { return (d.人數); })]);
+        y.domain([0, d3.max(data, function(d) { return parseInt (d.人數); })]);
 
         g.append("g")
          .attr("transform", "translate(0," + height + ")")
@@ -56,8 +56,8 @@
         g.append("g")
          .call(d3.axisLeft(y).tickFormat(function(d){
              return d +"p" ;
-         }).ticks(10))
-         .tickValues([0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40])
+         }).ticks(60))
+         
          .append("text")
          .attr("transform", "rotate(-90)")
          .attr("y", 10)
