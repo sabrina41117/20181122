@@ -23,7 +23,7 @@
         height = svg.attr("height") - margin;
 
     svg.append("text")
-       .attr("transform", "translate(200,0)")
+       .attr("transform", "translate(100,0)")
        .attr("x", 50)
        .attr("y", 50)
        .attr("font-size", "20px")
@@ -41,7 +41,7 @@
         }
 
         x.domain(data.map(function(d) { return d.行政區; }));
-        y.domain([0, d3.max(data, function(d) { return  (d.人數); })]);
+        y.domain([0, d3.max(data, function(d) { return parseInt (d.人數); })]);
 
         g.append("g")
          .attr("transform", "translate(0," + height + ")")
