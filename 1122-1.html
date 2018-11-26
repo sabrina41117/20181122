@@ -3,7 +3,7 @@
 <head>
     <style>
         .bar {
-            fill: steelblue;
+            fill: rgb(121, 70, 180);
         }
 
         .highlight {
@@ -14,7 +14,7 @@
     <meta charset="utf8">
 </head>
 <body>
-<svg width="800" height="500"></svg>
+<svg width="800" height="800"></svg>
 <script>
 
     var svg = d3.select("svg"),
@@ -41,7 +41,7 @@
         }
 
         x.domain(data.map(function(d) { return d.行政區; }));
-        y.domain([0, d3.max(data, function(d) { return parseInt (d.人數); })]);
+        y.domain([0, d3.max(data, function(d) { return  (d.人數); })]);
 
         g.append("g")
          .attr("transform", "translate(0," + height + ")")
