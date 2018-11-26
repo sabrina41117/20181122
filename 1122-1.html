@@ -14,7 +14,7 @@
     <meta charset="utf8">
 </head>
 <body>
-<svg width="1200" height="1000"></svg>
+<svg width="800" height="800"></svg>
 <script>
 
     var svg = d3.select("svg"),
@@ -33,7 +33,7 @@
         y = d3.scaleLinear().range([height, 0]);
 
     var g = svg.append("g")
-            .attr("transform", "translate(" + 100+ "," + 100 + ")");
+            .attr("transform", "translate(" + 200+ "," + 200 + ")");
 
     d3.csv("xyz.csv", function(error, data) {
         if (error) {
@@ -47,7 +47,7 @@
          .attr("transform", "translate(0," + height + ")")
          .call(d3.axisBottom(x))
          .append("text")
-         .attr("y", height - 250)
+         .attr("y", height - 400)
          .attr("x", width - 100)
          .attr("text-anchor", "end")
          .attr("stroke", "purple")
