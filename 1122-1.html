@@ -14,7 +14,7 @@
     <meta charset="utf8">
 </head>
 <body>
-<svg width="1000" height="1000"></svg>
+<svg width="800" height="800"></svg>
 <script>
 
     var svg = d3.select("svg"),
@@ -47,8 +47,8 @@
          .attr("transform", "translate(0," + height + ")")
          .call(d3.axisBottom(x))
          .append("text")
-         .attr("y", height - 100)
-         .attr("x", width - 100)
+         .attr("y", height -250)
+         .attr("x", width - 250)
          .attr("text-anchor", "end")
          .attr("stroke", "purple")
          .text("行政區");
