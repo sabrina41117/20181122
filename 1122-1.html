@@ -33,7 +33,7 @@
         y = d3.scaleLinear().range([height, 0]);
 
     var g = svg.append("g")
-            .attr("transform", "translate(" + 100+ "," + 100 + ")");
+            .attr("transform", "translate(" + 100+ "," + 200 + ")");
 
     d3.csv("xyz.csv", function(error, data) {
         if (error) {
@@ -48,7 +48,7 @@
          .call(d3.axisBottom(x))
          .append("text")
          .attr("y", height -250)
-         .attr("x", width -250)
+         .attr("x", width -100)
          .attr("text-anchor", "start")
          .attr("stroke", "purple")
          .text("行政區");
