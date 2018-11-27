@@ -14,7 +14,7 @@
     <meta charset="utf8">
 </head>
 <body>
-<svg width="800" height="800"></svg>
+<svg width="800" height="1000"></svg>
 <script>
 
     var svg = d3.select("svg"),
@@ -47,7 +47,7 @@
          .attr("transform", "translate(0," + height + ")")
          .call(d3.axisBottom(x))
          .append("text")
-         .attr("y", height - 250)
+         .attr("y", height - 300)
          .attr("x", width - 100)
          .attr("text-anchor", "end")
          .attr("stroke", "purple")
